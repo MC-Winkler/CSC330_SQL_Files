@@ -25,19 +25,19 @@ CREATE TABLE elon.member_association(
 
 INSERT INTO elon.member
 	(member_id)
-    VALUES (1);
+    VALUES (DEFAULT);
     
 INSERT INTO elon.member
 	(member_id)
-    VALUES (2);
+    VALUES (DEFAULT);
     
 INSERT INTO elon.association
 	(association_id)
-    VALUES (1);
+    VALUES (DEFAULT);
      
 INSERT INTO elon.association
 	(association_id)
-    VALUES (2);
+    VALUES (DEFAULT);
 
 /*Begin ex 3*/
 
@@ -46,5 +46,5 @@ ALTER TABLE
 ADD COLUMN 
 	`payment_date` DATE,
 ADD COLUMN 
-	`annual_dues` DECIMAL(5,2);
+	`annual_dues` DECIMAL(5,2)	DEFAULT 52.50;
 SELECT * FROM elon.member;
